@@ -1,0 +1,262 @@
+* {
+  box-sizing: border-box;
+  font-size: 1vw;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-image: url(./images/MerciesAttilaDuo_DSCF6718_20240412_OE.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: start;
+  height: 6vh;
+  width: 100%;
+}
+
+.headerMid {
+  display: flex;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.socialLogos {
+  display: flex;
+  flex-direction: row;
+  height: 30%;
+  width: 8%;
+  align-items: end;
+  justify-content: space-around;
+  margin-bottom: 0.5rem;
+  margin-left: 1rem;
+}
+
+.ytb {
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+}
+
+.fcb,
+.inst {
+  height: 30px;
+  width: 30px;
+  background-size: cover;
+  opacity: 0.7;
+  margin-bottom: 0.3rem;
+}
+
+.ytb {
+  background-image: url(./Assets/youtube-app-white-icon.svg);
+}
+
+.ytb:hover {
+  background-image: url(./Assets/youtube.svg);
+  opacity: 1;
+  background-size: cover;
+}
+
+.fcb {
+  background-image: url(./Assets/facebook-app-round-white-icon.svg);
+}
+
+.fcb:hover {
+  background-image: url(./Assets/facebook.svg);
+  opacity: 1;
+}
+
+.inst {
+  background-image: url(./Assets/instagram-white-icon.svg);
+}
+
+.inst:hover {
+  background-image: url(./Assets/instagram.svg);
+  opacity: 1;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  background-color: rgba(21, 17, 17, 0.3);
+}
+
+.logo {
+  height: 8rem;
+  width: 8rem;
+  margin-right: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+  font-size: 11rem;
+  font-family: "Encode Sans Semi Expanded", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  letter-spacing: 0.14em;
+  color: white;
+  margin: 0px 0px 0px 0px;
+  padding: 0;
+  cursor: default;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.sidenav .menuItems {
+  padding: 10px 8px 2px 8px;
+  text-decoration: none;
+  font-size: 30px;
+  color: white;
+  display: inline-block;
+  position: relative;
+  justify-self: center;
+  align-self: center;
+  transition: 0.3s;
+  font-family: "Gruppo", sans-serif;
+}
+
+.sidenav .menuItems::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.sidenav .menuItems:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  font-size: 55px;
+  color: white;
+}
+
+.sidenav .flags {
+  position: absolute;
+  bottom: 0;
+  padding: 1%;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.flag {
+  border-radius: 5%;
+}
+
+.sidenav .closebtn:hover {
+  color: #e6dede;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.menuButton {
+  color: white;
+  margin: 5px 5px 0 0;
+  font-size: 2rem;
+  cursor: pointer;
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+}
+
+.menuButton:hover {
+  color: #000000;
+}
+
+@media only screen and (max-width: 490px) {
+  .mainContent {
+    height: 70%;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 30rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .header {
+    height: 15%;
+  }
+
+  .footer {
+    height: 15%;
+  }
+
+  .logo {
+    height: 25rem;
+    width: 25rem;
+  }
+
+  .menuButton {
+    font-size: 6rem;
+  }
+}
