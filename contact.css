@@ -193,7 +193,7 @@ strong {
 
 .contactCard {
   background-color: rgb(255, 255, 255, 0.7);
-  border-radius: 25%;
+  border-radius: 4rem;
   height: 90%;
   width: 35%;
   display: flex;
@@ -441,7 +441,7 @@ strong {
     width: 22%;
     border-radius: 50%;
     border: 5px solid white;
-    margin: 0;
+    margin-bottom: 1rem;
   }
 
   .topRight {
