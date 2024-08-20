@@ -250,7 +250,10 @@ a {
   .footer {
     height: 15%;
     width: 95%;
-    margin: 0 3rem;
+  }
+
+  .socialLogos {
+    margin-left: 5rem;
   }
 
   .logo {
