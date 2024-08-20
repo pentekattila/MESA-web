@@ -249,11 +249,13 @@ a {
 
   .footer {
     height: 15%;
-    width: 95%;
+    width: 100%;
   }
 
   .socialLogos {
     margin-left: 5rem;
+    width: 35%;
+    justify-content: space-evenly;
   }
 
   .logo {
