@@ -483,11 +483,9 @@ strong {
 
   .contactParagraph {
     font-family: "EB Garamond", serif;
-    font-size: 3.2rem;
+    font-size: 3rem;
     font-weight: 300;
     text-align: center;
-    margin: 0;
-    padding: 0;
   }
 
   .contactParagraph a {
