@@ -542,4 +542,21 @@ a {
   .menuButton {
     font-size: 6rem;
   }
+
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-body p {
+    font-size: 3.5rem;
+  }
 }
