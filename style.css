@@ -249,7 +249,8 @@ a {
 
   .footer {
     height: 15%;
-    width: 100vw;
+    width: 95%;
+    margin: 0 3rem;
   }
 
   .logo {
