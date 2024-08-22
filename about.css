@@ -248,6 +248,10 @@ a {
 } */
 
 @media only screen and (max-width: 600px), screen and (min-height: 800px) {
+  body {
+    min-height: -webkit-fill-available;
+  }
+
   .center {
     display: flex;
     flex-direction: column;
