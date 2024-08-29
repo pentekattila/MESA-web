@@ -280,6 +280,11 @@ a {
   align-items: end;
 }
 
+.links {
+  text-decoration: none;
+  color: white;
+}
+
 .menuButton {
   color: white;
   margin: 5px 5px 0 0;
