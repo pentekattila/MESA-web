@@ -354,7 +354,7 @@ strong {
   color: #000000;
 }
 
-@media only screen and (max-width: 600px), screen and (min-height: 800px) {
+@media screen and (max-width: 600px), screen and (min-height: 800px) {
   .center {
     display: flex;
     flex-direction: column;
@@ -500,5 +500,372 @@ strong {
   .email {
     height: 5.5rem;
     width: 5.5rem;
+  }
+}
+
+@media (min-height: 1440px), screen and (orientation: landscape) {
+  * {
+    box-sizing: border-box;
+    font-size: 1vw;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./images/MerciesAttilaDuo_DSCF6718_20240412_OE.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    height: 6vh;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+
+  .headerMid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .headerMid h2 {
+    color: white;
+    font-family: "Gruppo", sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+  }
+
+  .headerLeft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .headerLeft h2 {
+    color: white;
+    font-family: "Encode Sans Semi Expanded", sans-serif;
+    font-size: 2rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .mainContent {
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+    width: 90vw;
+    justify-content: center;
+  }
+
+  .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(41, 41, 41, 0.8);
+    border-radius: 30px;
+  }
+
+  .centerTop {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .topLeft {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .topLeft h2,
+  .topLeft p {
+    color: white;
+  }
+
+  .topLeft h2 {
+    font-family: "EB Garamond", serif;
+    font-weight: 300;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .topLeft p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    font-family: "Hind", sans-serif;
+  }
+
+  .donateParagraph a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  .topLeft .revolut,
+  .topLeft .tel {
+    display: inline-block;
+    position: relative;
+    color: #ffffff;
+  }
+
+  .topLeft .revolut::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+  }
+
+  .topLeft .revolut:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .topLeft .tel::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+  }
+
+  .topLeft .tel:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  strong {
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+
+  .gif {
+    height: 25%;
+    width: 30%;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin: 1rem;
+  }
+
+  .topRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 60%;
+  }
+
+  .rightTop,
+  .rightBottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+  }
+
+  .contactCard {
+    background-color: rgb(255, 255, 255, 0.7);
+    border-radius: 4rem;
+    height: 90%;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+  }
+
+  .contactTitle {
+    font-size: 1.9rem;
+    font-family: "Roboto Slab", serif;
+    font-weight: 300;
+    margin: 0;
+  }
+
+  .contactParagraph {
+    font-family: "EB Garamond", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .contactParagraph a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+  }
+
+  .contactParagraph a:hover {
+    color: black;
+    cursor: url("./Assets/cursor\ phone.svg"), auto;
+  }
+
+  .youtube,
+  .facebook,
+  .instagram,
+  .email {
+    height: 3rem;
+    width: 3rem;
+    background-size: cover;
+    opacity: 0.7;
+    margin-bottom: 0.3rem;
+  }
+
+  .youtube {
+    background-image: url(./Assets/youtube.svg);
+  }
+
+  .youtube:hover {
+    background-image: url(./Assets/youtube-color-icon.svg);
+    opacity: 1;
+  }
+
+  .facebook {
+    background-image: url(./Assets/facebook.svg);
+  }
+
+  .facebook:hover {
+    background-image: url(./Assets/facebook-round-color-icon.svg);
+    opacity: 1;
+  }
+
+  .instagram {
+    background-image: url(./Assets/instagram.svg);
+  }
+
+  .instagram:hover {
+    background-image: url(./Assets/ig-instagram-icon.svg);
+    opacity: 1;
+  }
+
+  .email {
+    background-image: url(./Assets/envelope-fill.svg);
+  }
+
+  .email:hover {
+    background-image: url(./Assets/mail-symbol-icon.svg);
+    opacity: 1;
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidenav .menuItems {
+    padding: 10px 8px 2px 8px;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    display: inline-block;
+    position: relative;
+    justify-self: center;
+    align-self: center;
+    transition: 0.3s;
+    font-family: "Gruppo", sans-serif;
+  }
+
+  .sidenav .menuItems::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+  }
+
+  .sidenav .menuItems:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 55px;
+    color: white;
+  }
+
+  .sidenav .closebtn:hover {
+    color: #e6dede;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+
+  .menuButton {
+    color: white;
+    margin: 5px 5px 0 0;
+    font-size: 2rem;
+    cursor: pointer;
+    font-family: "Roboto Slab", serif;
+    font-weight: 400;
+  }
+
+  .menuButton:hover {
+    color: #000000;
+  }
+
+  .gif {
+    height: 25%;
+    width: 35%;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-bottom: 2rem;
+    display: block;
   }
 }

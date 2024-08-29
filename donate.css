@@ -438,3 +438,338 @@ a {
     font-size: 4rem;
   }
 }
+
+@media (min-height: 960px), screen and (orientation: landscape) {
+  * {
+    box-sizing: border-box;
+    font-size: 1vw;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./images/MerciesAttilaDuo_DSCF6718_20240412_OE.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    height: 6vh;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+
+  .headerMid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .headerMid h2 {
+    color: white;
+    font-family: "Gruppo", sans-serif;
+    font-weight: 600;
+    font-size: 3rem;
+  }
+
+  .headerLeft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .headerLeft h2 {
+    color: white;
+    font-family: "Encode Sans Semi Expanded", sans-serif;
+    font-size: 2rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .mainContent {
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+    width: 90%;
+    justify-content: center;
+  }
+
+  .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(41, 41, 41, 0.8);
+  }
+
+  .centerTop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    padding: 1% 5%;
+    height: 60%;
+    width: 100%;
+  }
+
+  .centerTop h2,
+  .centerTop p {
+    color: rgb(255, 255, 255);
+  }
+
+  .centerTop h2 {
+    font-size: 2.4rem;
+    font-family: "Cormorant Garamond", serif;
+  }
+
+  .centerTop p {
+    font-size: 1.6rem;
+    font-family: "Hind", sans-serif;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  .centerBottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    height: 40%;
+    width: 100%;
+  }
+
+  /* Menu css */
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sidenav .menuItems {
+    padding: 10px 8px 2px 8px;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    display: inline-block;
+    position: relative;
+    justify-self: center;
+    align-self: center;
+    transition: 0.3s;
+    font-family: "Gruppo", sans-serif;
+  }
+
+  .sidenav .menuItems::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+  }
+
+  .sidenav .menuItems:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 55px;
+    color: white;
+  }
+
+  .sidenav .closebtn:hover {
+    color: #b3a9a9;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+
+  .menuButton {
+    color: white;
+    margin: 5px 5px 0 0;
+    font-size: 2rem;
+    cursor: pointer;
+    font-family: "Roboto Slab", serif;
+    font-weight: 400;
+  }
+
+  .menuButton:hover {
+    color: #000000;
+  }
+
+  /* Modal css */
+  .modal-button {
+    background: none;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: white;
+    font-family: "EB Garamond", serif;
+    font-size: 1.5rem;
+  }
+
+  .modal-button:hover {
+    background-color: rgb(255, 255, 255, 0.6);
+    cursor: pointer;
+  }
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    padding-top: 5%;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(228, 228, 228); /* Fallback color */
+    background-color: rgba(255, 255, 255, 0.95); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 40%;
+    height: 90%;
+    box-shadow: 0 4px 8px 0 rgba(250, 247, 247, 0.2),
+      0 6px 20px 0 rgba(232, 232, 232, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    background-image: url(./images/tamogato.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+  }
+
+  /* Add Animation */
+  @-webkit-keyframes animatebottom {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+
+  @keyframes animatebottom {
+    from {
+      bottom: -300px;
+      opacity: 0;
+    }
+    to {
+      bottom: 0;
+      opacity: 1;
+    }
+  }
+
+  /* The Close Button */
+  .close {
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .modal-header {
+    margin-top: 10px;
+    padding: 10px 10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+  }
+
+  .modal-body {
+    padding: 0 8%;
+  }
+
+  .modal-body p {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 50px;
+    padding: 3%;
+  }
+
+  .modal-footer {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 2px 16px;
+    margin-bottom: 7%;
+    color: white;
+  }
+
+  .modalDonate {
+    background: none;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: rgb(0, 0, 0);
+    font-family: "EB Garamond", serif;
+    font-size: 1.5rem;
+    background-color: rgb(255, 255, 255, 0.6);
+  }
+
+  .modalDonate:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #424242;
+    cursor: pointer;
+  }
+}
