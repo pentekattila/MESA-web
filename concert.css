@@ -320,6 +320,13 @@ a {
   background-color: rgba(41, 41, 41);
 }
 
+.modal-button p {
+  font-size: 0.7rem;
+  margin: 0;
+  padding: 0;
+  color: rgb(208, 208, 208);
+}
+
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -562,5 +569,12 @@ a {
 
   .modal-body p {
     font-size: 3.5rem;
+  }
+
+  .modal-button p {
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 0;
+    color: rgb(208, 208, 208);
   }
 }
