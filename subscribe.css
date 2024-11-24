@@ -57,3 +57,23 @@ body {
 .textBox .link:hover {
   background-color: rgb(255, 255, 255, 0.1);
 }
+
+@media only screen and (max-width: 490px) {
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .textBox {
+    width: 80%;
+    height: auto;
+  }
+
+  .textBox h1 {
+    font-size: 6rem;
+  }
+
+  .textBox .link {
+    font-size: 5rem;
+  }
+}
