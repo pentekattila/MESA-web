@@ -58,149 +58,35 @@ a {
 
 .mainContent {
   display: flex;
-  flex-direction: row;
-  height: 90vh;
-  width: 90vw;
-  justify-content: center;
-}
-
-.center {
-  display: flex;
-  flex-direction: column;
+  height: 100%;
+  width: 100%;
   justify-content: center;
   align-items: center;
-  background-color: rgba(41, 41, 41, 0.8);
   border-radius: 30px;
 }
 
-.centerTop {
-  height: 100%;
+.cards {
+  background-color: rgba(41, 41, 41, 0.8);
   width: 100%;
+  height: 80%;
+  border-radius: 30px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 3rem;
+  padding: 4rem;
 }
 
-.topLeft {
+.cards .contactCard {
   display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 40%;
-  justify-content: start;
-  align-items: center;
-  padding: 2rem;
-}
-
-.topLeft h2,
-.topLeft p {
-  color: white;
-}
-
-.topLeft h2 {
-  font-family: "EB Garamond", serif;
-  font-weight: 300;
-  font-size: 2.5rem;
-  text-align: center;
-}
-
-.topLeft p {
-  font-size: 1.5rem;
-  font-weight: 300;
-  font-family: "Hind", sans-serif;
-}
-
-.donateParagraph a {
-  text-decoration: none;
-  color: white;
-  font-size: 1.5rem;
-}
-
-.topLeft .revolut,
-.topLeft .tel {
-  display: inline-block;
-  position: relative;
-  color: #ffffff;
-}
-
-.topLeft .revolut::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  background-color: #ffffff;
-  transform-origin: bottom right;
-  transition: transform 0.3s ease-out;
-}
-
-.topLeft .revolut:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-.topLeft .tel::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  background-color: #ffffff;
-  transform-origin: bottom right;
-  transition: transform 0.3s ease-out;
-}
-
-.topLeft .tel:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-strong {
-  text-decoration: none;
-  font-size: 1.5rem;
-}
-
-.gif {
-  height: 25%;
-  width: 30%;
-  border-radius: 50%;
-  border: 5px solid white;
-  margin: 1rem;
-}
-
-.topRight {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 60%;
-}
-
-.rightTop,
-.rightBottom {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  height: 50%;
-  width: 100%;
-}
-
-.contactCard {
   background-color: rgb(255, 255, 255, 0.7);
-  border-radius: 4rem;
-  height: 90%;
-  width: 35%;
-  display: flex;
+  border-radius: 10px;
+  height: 100%;
+  width: 25%;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
 }
 
 .contactTitle {
@@ -210,9 +96,9 @@ strong {
   margin: 0;
 }
 
-.contactParagraph {
+.contactCard .contactParagraph {
   font-family: "EB Garamond", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 300;
   text-align: center;
 }
@@ -355,21 +241,6 @@ strong {
 }
 
 @media screen and (max-width: 600px), screen and (min-height: 800px) {
-  .center {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .centerLeft {
-    width: 100%;
-    height: 40%;
-  }
-
-  .centerRight {
-    width: 100%;
-    height: 60%;
-  }
-
   .header {
     display: flex;
     flex-direction: row;
@@ -386,108 +257,60 @@ strong {
     font-size: 6rem;
   }
 
-  .centerTop {
-    height: 100%;
-    width: 100%;
+  .mainContent {
     display: flex;
-    flex-direction: column;
+    height: 100%;
+    width: 90%;
     justify-content: center;
     align-items: center;
+    border-radius: 30px;
   }
 
-  .topLeft {
-    display: flex;
-    flex-direction: column;
-    height: 35%;
+  .cards {
+    background-color: rgba(41, 41, 41, 0.8);
     width: 100%;
-    justify-content: start;
-    align-items: center;
-    padding: 2rem;
-    padding: 4%;
-  }
-
-  .topLeft h2,
-  .topLeft p {
-    color: white;
-  }
-
-  .topLeft h2 {
-    font-family: "EB Garamond", serif;
-    font-weight: 300;
-    font-size: 5rem;
-    text-align: center;
-    margin: 0;
-  }
-
-  .topLeft p {
-    font-size: 3.3rem;
-    font-weight: 300;
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  }
-
-  .donateParagraph a {
-    text-decoration: none;
-    color: white;
-    font-size: 3.5rem;
-  }
-
-  strong {
-    text-decoration: none;
-    font-size: 3.5rem;
-  }
-
-  .gif {
-    height: 25%;
-    width: 22%;
-    border-radius: 50%;
-    border: 5px solid white;
-    margin-bottom: 2rem;
-    display: none;
-  }
-
-  .topRight {
-    display: flex;
-    flex-direction: column;
+    height: 80%;
+    border-radius: 30px;
+    display: grid;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8rem;
+    padding: 5rem;
+    margin: 0 auto;
   }
 
-  .rightTop,
-  .rightBottom {
+  .cards .contactCard {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    height: 50%;
-    width: 100%;
-  }
-
-  .contactCard {
     background-color: rgb(255, 255, 255, 0.7);
-    border-radius: 3%;
-    height: 85%;
-    width: 45%;
-    display: flex;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    padding: 1rem;
+  }
+
+  .contactTitle {
+    font-size: 1.9rem;
+    font-family: "Roboto Slab", serif;
+    font-weight: 300;
+    margin: 0;
+  }
+
+  .contactCard .contactParagraph {
+    font-family: "EB Garamond", sans-serif;
+    font-size: 3.3rem;
+    font-weight: 300;
+    text-align: center;
   }
 
   .contactTitle {
     font-size: 6rem;
     font-family: "Cormorant Garamond", serif;
     margin: 0;
-  }
-
-  .contactParagraph {
-    font-family: "EB Garamond", serif;
-    font-size: 3rem;
-    font-weight: 300;
-    text-align: center;
-    margin: 0;
-    padding: 0;
   }
 
   .contactParagraph a {
