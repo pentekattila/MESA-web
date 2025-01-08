@@ -231,7 +231,7 @@ a {
   .centerTop {
     display: flex;
     flex-direction: column;
-    height: 50%;
+    height: 47%;
     width: 100%;
     gap: 0;
   }
@@ -239,7 +239,7 @@ a {
   .centerBottom {
     display: flex;
     flex-direction: column;
-    height: 50%;
+    height: 47%;
     width: 100%;
   }
 
