@@ -114,7 +114,13 @@ a {
   cursor: url("./Assets/cursor\ phone.svg"), auto;
 }
 
+.logos {
+  display: flex;
+  gap: 1rem;
+}
+
 .youtube,
+.spotify,
 .facebook,
 .instagram,
 .email {
@@ -131,6 +137,15 @@ a {
 
 .youtube:hover {
   background-image: url(./Assets/youtube-color-icon.svg);
+  opacity: 1;
+}
+
+.spotify {
+  background-image: url(./Assets/spotifyblack.svg);
+}
+
+.spotify:hover {
+  background-image: url(./Assets/spotify-color-svgrepo-com.svg);
   opacity: 1;
 }
 
