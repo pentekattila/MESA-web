@@ -59,14 +59,15 @@ a {
 .mainContent {
   display: flex;
   flex-direction: row;
-  height: 90vh;
+  height: 100vh;
   width: 90vw;
   justify-content: center;
+  align-items: center;
 }
 
 .center {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   border-radius: 30px;
@@ -77,17 +78,50 @@ a {
 
 .centerTop,
 .centerBottom {
-  height: 50%;
-  width: 100%;
+  height: 100%;
+
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 }
 
+.centerBottom {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.centerTop {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.centerBottomBottom,
+.centerBottomTop {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
 .ytbVideo {
-  height: 70%;
-  width: 20%;
+  height: 65%;
+  width: 45%;
+  border-radius: 20px;
+}
+
+.musicPlayer {
+  width: 40%;
+  height: 83%;
   border-radius: 20px;
 }
 
@@ -174,16 +208,8 @@ a {
   .center {
     display: flex;
     flex-direction: column;
-  }
-
-  .centerLeft {
     width: 100%;
-    height: 40%;
-  }
-
-  .centerRight {
-    width: 100%;
-    height: 60%;
+    gap: 3rem;
   }
 
   .header {
@@ -204,196 +230,34 @@ a {
 
   .centerTop {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     height: 50%;
     width: 100%;
+    gap: 0;
   }
 
   .centerBottom {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     height: 50%;
     width: 100%;
+  }
+
+  .centerBottomTop,
+  .centerBottomBottom {
+    display: flex;
+    height: 50%;
+    width: 100%;
+    gap: 5rem;
   }
 
   .ytbVideo {
     width: 45%;
-    height: 40%;
-  }
-}
-
-@media (min-height: 960px), screen and (orientation: landscape) {
-  * {
-    box-sizing: border-box;
-    font-size: 1vw;
+    height: 90%;
   }
 
-  body {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    justify-content: center;
-    align-items: center;
-    background-image: url(./images/MerciesAttilaDuo_DSCF6718_20240412_OE.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
-  }
-
-  .header {
-    display: flex;
-    flex-direction: row;
-    height: 6vh;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    margin-bottom: 1rem;
-  }
-
-  .headerMid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .headerMid h2 {
-    color: white;
-    font-family: "Gruppo", sans-serif;
-    font-weight: 600;
-    font-size: 3rem;
-  }
-
-  .headerLeft {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .headerLeft h2 {
-    color: white;
-    font-family: "Encode Sans Semi Expanded", sans-serif;
-    font-size: 2rem;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  .mainContent {
-    display: flex;
-    flex-direction: row;
-    height: 90vh;
-    width: 90vw;
-    justify-content: center;
-  }
-
-  .center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-    height: 100%;
+  .musicPlayer {
     width: 100%;
-    opacity: 0.85;
-  }
-
-  .centerTop,
-  .centerBottom {
     height: 50%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  .ytbVideo {
-    height: 70%;
-    width: 20%;
-    border-radius: 20px;
-  }
-
-  .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .sidenav .menuItems {
-    padding: 10px 8px 2px 8px;
-    text-decoration: none;
-    font-size: 30px;
-    color: white;
-    display: inline-block;
-    position: relative;
-    justify-self: center;
-    align-self: center;
-    transition: 0.3s;
-    font-family: "Gruppo", sans-serif;
-  }
-
-  .sidenav .menuItems::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 1px;
-    bottom: 0;
-    left: 0;
-    background-color: #ffffff;
-    transform-origin: bottom right;
-    transition: transform 0.3s ease-out;
-  }
-
-  .sidenav .menuItems:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
-
-  .sidenav .closebtn {
-    position: absolute;
-    top: 0;
-    left: 10px;
-    font-size: 55px;
-    color: white;
-  }
-
-  .sidenav .closebtn:hover {
-    color: #e6dede;
-  }
-
-  .left {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-  }
-
-  .menuButton {
-    color: white;
-    margin: 5px 5px 0 0;
-    font-size: 2rem;
-    cursor: pointer;
-    font-family: "Roboto Slab", serif;
-    font-weight: 400;
-  }
-
-  .menuButton:hover {
-    color: #000000;
   }
 }
